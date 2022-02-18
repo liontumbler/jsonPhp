@@ -244,6 +244,10 @@ class DbJson
         return $newTabla;
     }
 
-
+    //Obtiene datos enviados en el body con: PUT, POST, GET, DELETE
+    public function GetDataRequest()
+    {
+        return json_decode(file_get_contents("php://input"), true);
+    }
 }
 ?>
