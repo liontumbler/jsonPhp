@@ -249,5 +249,9 @@ class DbJson
     {
         return json_decode(file_get_contents("php://input"), true);
     }
+
+    public function GetDataRequestURL(){
+        return parse_str(file_get_contents("php://input"),$post_vars);
+    }
 }
 ?>
